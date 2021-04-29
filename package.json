@@ -1,0 +1,20 @@
+{
+  "name": "bleu-daily-routine",
+  "version": "1.0.0",
+  "description": "for you daily routine management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DasolPark/Bleu_Daily-Routine-Manager.git"
+  },
+  "author": "bleu park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DasolPark/Bleu_Daily-Routine-Manager/issues"
+  },
+  "homepage": "https://github.com/DasolPark/Bleu_Daily-Routine-Manager#readme",
+  "dependencies": {}
+}
