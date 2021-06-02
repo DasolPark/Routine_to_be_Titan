@@ -1,20 +1,20 @@
 {
-  "name": "bleu-daily-routine",
+  "name": "routine_to_be_titan",
   "version": "1.0.0",
-  "description": "for you daily routine management",
+  "description": "It's a tool to become Titan",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DasolPark/Bleu_Daily-Routine-Manager.git"
+    "url": "git+https://github.com/DasolPark/Routine_to_be_Titan.git"
   },
-  "author": "bleu park",
+  "author": "Dasol Park",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DasolPark/Bleu_Daily-Routine-Manager/issues"
+    "url": "https://github.com/DasolPark/Routine_to_be_Titan/issues"
   },
-  "homepage": "https://github.com/DasolPark/Bleu_Daily-Routine-Manager#readme",
+  "homepage": "https://github.com/DasolPark/Routine_to_be_Titan#readme",
   "dependencies": {}
 }
