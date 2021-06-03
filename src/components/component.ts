@@ -3,7 +3,7 @@ export interface Component {
 }
 
 export class BaseComponent<T extends HTMLElement> implements Component {
-  private readonly element: T;
+  protected readonly element: T;
 
   constructor(htmlString: string) {
     const template = document.createElement('template');
@@ -12,7 +12,7 @@ export class BaseComponent<T extends HTMLElement> implements Component {
     this.element = template.content.firstElementChild! as T;
   }
 
-  attachTo(parent: HTMLElement, position: InsertPosition = 'beforebegin') {
+  attachTo(parent: HTMLElement, position: InsertPosition = 'afterbegin') {
     parent.insertAdjacentElement(position, this.element);
   }
 }
