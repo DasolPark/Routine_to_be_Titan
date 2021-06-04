@@ -1,7 +1,7 @@
-import { BaseComponent, Component } from '../component.js';
+import { BaseComponent, Component } from '../component.js'
 
 export interface Composable {
-  addChild(child: Component, position?: InsertPosition): void;
+  addChild(child: Component, position?: InsertPosition): void
 }
 
 export class PageItemComponent extends BaseComponent<HTMLLIElement> implements Composable {
@@ -13,27 +13,27 @@ export class PageItemComponent extends BaseComponent<HTMLLIElement> implements C
         </button>
         <section class="item"></section>
       </li>
-    `);
+    `)
 
-    const closeBtn = this.element.querySelector('.close-btn')! as HTMLSpanElement;
+    const closeBtn = this.element.querySelector('.close-btn')! as HTMLSpanElement
     closeBtn.onclick = () => {
-      console.log('close button clicked!');
+      console.log('close button clicked!')
     }
   }
 
   addChild(child: Component, position: InsertPosition = 'afterbegin') {
-    child.attachTo(this.element, position);
+    child.attachTo(this.element, position)
   }
 }
 
 export class PageComponent extends BaseComponent<HTMLUListElement> implements Composable {
   constructor() {
-    super(`<ul class="page"></ul>`);
+    super(`<ul class="page"></ul>`)
   }
 
   addChild(child: Component, position: InsertPosition = 'afterbegin') {
-    const item = new PageItemComponent();
-    item.addChild(child, position);
-    item.attachTo(this.element);
+    const item = new PageItemComponent()
+    item.addChild(child, position)
+    item.attachTo(this.element)
   }
 }
