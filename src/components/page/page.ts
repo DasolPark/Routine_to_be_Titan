@@ -11,7 +11,7 @@ export class PageItemComponent extends BaseComponent<HTMLLIElement> implements C
         <button class="close-btn">
           <span>&times;</span>
         </button>
-        <section class="item"></section>
+        <div class="item"></div>
       </li>
     `)
 
