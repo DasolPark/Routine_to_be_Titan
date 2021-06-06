@@ -4,7 +4,11 @@ export interface Composable {
   addChild(child: Component, position?: InsertPosition): void
 }
 
+type CloseListener = () => void
+
 export class PageItemComponent extends BaseComponent<HTMLLIElement> implements Composable {
+  private closeListener?: CloseListener
+
   constructor() {
     super(`
       <li class="page-item">
@@ -17,12 +21,16 @@ export class PageItemComponent extends BaseComponent<HTMLLIElement> implements C
 
     const closeBtn = this.element.querySelector('.close-btn')! as HTMLSpanElement
     closeBtn.onclick = () => {
-      console.log('close button clicked!')
+      this.closeListener && this.closeListener()
     }
   }
 
   addChild(child: Component, position: InsertPosition = 'afterbegin') {
     child.attachTo(this.element, position)
+  }
+
+  setOnCloseListener(closeListener: CloseListener) {
+    this.closeListener = closeListener
   }
 }
 
@@ -35,5 +43,8 @@ export class PageComponent extends BaseComponent<HTMLUListElement> implements Co
     const item = new PageItemComponent()
     item.addChild(child, position)
     item.attachTo(this.element)
+    item.setOnCloseListener(() => {
+      item.removeFrom(this.element)
+    })
   }
 }
