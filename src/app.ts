@@ -1,5 +1,6 @@
 import { ImageComponent } from './components/page/item/image.js'
 import { NoteComponent } from './components/page/item/note.js'
+import { TodoComponent } from './components/page/item/todo.js'
 import { PageComponent } from './components/page/page.js'
 
 class App {
@@ -13,6 +14,9 @@ class App {
 
     const Note = new NoteComponent('Note Title', 'Hey there!')
     this.page.addChild(Note)
+
+    const Todo = new TodoComponent('Meditation')
+    this.page.addChild(Todo)
 
     this.page.attachTo(appRoot)
   }
