@@ -1,3 +1,4 @@
+import { DiaryComponent } from './components/page/item/diary.js'
 import { ImageComponent } from './components/page/item/image.js'
 import { NoteComponent } from './components/page/item/note.js'
 import { TodoComponent } from './components/page/item/todo.js'
@@ -17,6 +18,15 @@ class App {
 
     const Todo = new TodoComponent('Meditation')
     this.page.addChild(Todo)
+
+    const Diary = new DiaryComponent(
+      ['one', 'two', 'three'],
+      ['one', 'two', 'three'],
+      ['one', 'two', 'three'],
+      ['one', 'two', 'three'],
+      ['one', 'two', 'three']
+    )
+    this.page.addChild(Diary)
 
     this.page.attachTo(appRoot)
   }

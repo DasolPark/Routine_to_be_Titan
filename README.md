@@ -13,3 +13,5 @@ It's a tool to become Titan💪🏻
 ## Need to know
 
 - [x] .prettierrc
+- [x] label attr
+- [x] .textContent👍🏻 VS .innerText
