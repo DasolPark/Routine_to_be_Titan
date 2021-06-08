@@ -2,6 +2,7 @@ import { DiaryComponent } from './components/page/item/diary.js'
 import { ImageComponent } from './components/page/item/image.js'
 import { NoteComponent } from './components/page/item/note.js'
 import { TodoComponent } from './components/page/item/todo.js'
+import { VideoComponent } from './components/page/item/video.js'
 import { PageComponent } from './components/page/page.js'
 
 class App {
@@ -27,6 +28,9 @@ class App {
       ['one', 'two', 'three']
     )
     this.page.addChild(Diary)
+
+    const Video = new VideoComponent('Video Title', 'https://www.youtube.com/embed/g0_Bd_e7MF4')
+    this.page.addChild(Video)
 
     this.page.attachTo(appRoot)
   }
