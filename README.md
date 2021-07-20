@@ -2,6 +2,10 @@
 
 It's a tool to become Titan💪🏻
 
+## Notion
+
+- public: https://goldenrod-singer-66c.notion.site/Routine-to-be-Titan-c53c4c3a62c648fdb6d05ba5717e3cff
+
 ## Must have
 
 - [ ] Header: Button to select the day of the week
